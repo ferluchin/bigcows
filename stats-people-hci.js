@@ -1,4 +1,4 @@
-var date = "Thu Feb 16 2023 16:54:29 GMT-0500 (hora de Ecuador)";
+var date = "Thu Feb 16 2023 13:08:57 GMT-0500 (hora de Ecuador)";
 var data = [
   {
     "name": "Carlos Ivan Espinosa",
@@ -26,14 +26,7 @@ var data = [
         "39"
       ]
     },
-    "year": "2012",
-    "collaborators": [
-      "Marcelino de la Cruz Rot",
-      "Adri�n Escudero (ORCID 0000-0002-...",
-      "Arantzazu L. Luzuriaga.",
-      "Mar�a Fernanda Tapia-Armijos",
-      "Marcos M�ndez"
-    ]
+    "year": "2012"
   },
   {
     "name": "Omar Cabrera",
@@ -59,8 +52,7 @@ var data = [
         "10"
       ]
     },
-    "year": "2006",
-    "collaborators": []
+    "year": "2006"
   },
   {
     "name": "Juan Pablo Suárez",
@@ -88,20 +80,7 @@ var data = [
         "30"
       ]
     },
-    "year": "2007",
-    "collaborators": [
-      "Paulo Herrera",
-      "Dar�o Cruz S",
-      "St�phane Declerck",
-      "Paul Lojan Armijos",
-      "J�rgen Homeier",
-      "Matthias C. Rillig",
-      "Sigisfredo Garnica",
-      "Aminael Sanchez-Rodriguez",
-      "Stefania Cevallos",
-      "Marcos M�ndez",
-      "Oscar Vivanco-Galv�n"
-    ]
+    "year": "2007"
   },
   {
     "name": "Silvia González Pérez",
@@ -126,8 +105,7 @@ var data = [
         "13"
       ]
     },
-    "year": "2003",
-    "collaborators": []
+    "year": "2003"
   },
   {
     "name": "Nelson Piedra",
@@ -155,21 +133,7 @@ var data = [
         "28"
       ]
     },
-    "year": "2010",
-    "collaborators": [
-      "Edmundo Tovar Caro",
-      "Jorge L�pez-Vargas",
-      "Victor Saquicela",
-      "Audrey Romero-Pel�ez",
-      "Manuel Castro Gil",
-      "Antonio Garcia-Cabot",
-      "Mauricio Espinoza Mej�a",
-      "Hector R. Amado-Salvatierra (https://or...",
-      "Ant�nio Moreira Teixeira",
-      "Ricardo Colomo-Palacios (https://orcid...",
-      "Javiera Atenas",
-      "Boris Villaz�n-Terrazas"
-    ]
+    "year": "2010"
   },
   {
     "name": "Chabaco Armijos",
@@ -195,29 +159,7 @@ var data = [
         "19"
       ]
     },
-    "year": "2009",
-    "collaborators": [
-      "Giovanni Vidari",
-      "Omar Malagon",
-      "Jorge Ram�rez",
-      "James Willan Calva",
-      "Jos� Miguel Andrade",
-      "Diana Guaya",
-      "Hnin Thanda Aung",
-      "Gianluca Gilardoni",
-      "Eduardo Valarezo",
-      "Zaw Min Thu",
-      "Silvia Gonz�lez P�rez",
-      "Bracco Francesco",
-      "Hern�n Patricio Lucero Mosquera",
-      "Manuel Jesus Gazquez Gonzalez",
-      "Santiago Ojeda-Riascos",
-      "Faiq H.S. Hussain",
-      "Marcelo Tac�n",
-      "Claudia Herrera",
-      "Jorge Eduardo Ponce Zea",
-      "iuliana cota"
-    ]
+    "year": "2009"
   },
   {
     "name": "Omar Malagon",
@@ -242,8 +184,7 @@ var data = [
         "18"
       ]
     },
-    "year": "2006",
-    "collaborators": []
+    "year": "2006"
   },
   {
     "name": "Janneth Chicaiza",
@@ -271,20 +212,7 @@ var data = [
         "17"
       ]
     },
-    "year": "2010",
-    "collaborators": [
-      "Nelson Piedra",
-      "Jorge L�pez-Vargas",
-      "Edmundo Tovar Caro",
-      "Mariela Tapia-Leon",
-      "Elizabeth Cadme",
-      "Victor Saquicela",
-      "Audrey Romero-Pel�ez",
-      "Ricardo Colomo-Palacios (https://orcid...",
-      "Ren� Rolando Elizalde Solano",
-      "Mauricio Espinoza Mej�a",
-      "Lilia Quituisaca-Samaniego"
-    ]
+    "year": "2010"
   },
   {
     "name": "Luis Guaman",
@@ -309,8 +237,7 @@ var data = [
         "7"
       ]
     },
-    "year": "2012",
-    "collaborators": []
+    "year": "2012"
   },
   {
     "name": "Gianluca Gilardoni",
@@ -338,29 +265,7 @@ var data = [
         "27"
       ]
     },
-    "year": "2008",
-    "collaborators": [
-      "Giovanni Vidari",
-      "Jorge Ram�rez",
-      "Omar Malagon",
-      "Nixon Cumbicus Torres",
-      "Chabaco Armijos",
-      "Faiq H.S. Hussain",
-      "Lidia Guglielminetti Maria",
-      "James Willan Calva",
-      "Maria Picco Anna",
-      "Gloria Brusotti",
-      "Barbara Sgorbini",
-      "Ana Mar�a Quilez Guerrero",
-      "Caden Souccar",
-      "Zaw Min Thu",
-      "Jos� Miguel Andrade",
-      "Omar German Malagon Aviles",
-      "Dlzar A. Kheder",
-      "HAWRAZ IBRAHIM M.AMIN",
-      "Bracco Francesco",
-      "Alessandra Dentamaro"
-    ]
+    "year": "2008"
   },
   {
     "name": "Diana Rivera-Rogel",
@@ -388,29 +293,7 @@ var data = [
         "22"
       ]
     },
-    "year": "2010",
-    "collaborators": [
-      "Claudia Rodr�guez-Hidalgo (0000-000...",
-      "Isidro Mar�n-Guti�rrez",
-      "Andrea Victoria Vel�squez Benavides",
-      "Gianella Carri�n-Salinas (0000-0001-...",
-      "Ketty Daniela Calva-Cabrera",
-      "Luis M. Romero-Rodriguez (ORCID: 0...",
-      "Ignacio AGUADED (0000-0002-0229-...",
-      "Damian Mendoza-Zambrano",
-      "Jenny Yaguache",
-      "Catalina Gonz�lez-Cabrera (ORCID: h...",
-      "Cecilia UGALDE (ORCID: 0000-0001-...",
-      "M.I Pun�n",
-      "Rosa GARC�A-RUIZ",
-      "Stephany Celly-Alvarado",
-      "Ram�n Salaverr�a (ORCID:0000-0002...",
-      "Xos� Pereira-Fari�a",
-      "Abel Suing",
-      "francisco campos",
-      "�gueda Delgado Ponce",
-      "M. Amor P�rez-Rodr�guez (0000-0001..."
-    ]
+    "year": "2010"
   },
   {
     "name": "Jorge López-Vargas",
@@ -438,16 +321,7 @@ var data = [
         "14"
       ]
     },
-    "year": "2010",
-    "collaborators": [
-      "Nelson Piedra",
-      "Janneth Chicaiza",
-      "Edmundo Tovar Caro",
-      "Elizabeth Cadme",
-      "Ricardo Colomo-Palacios (https://orcid...",
-      "Manuel Castro Gil",
-      "Audrey Romero-Pel�ez"
-    ]
+    "year": "2010"
   },
   {
     "name": "Ángel Benítez",
@@ -475,26 +349,7 @@ var data = [
         "21"
       ]
     },
-    "year": "2011",
-    "collaborators": [
-      "Gregorio Arag�n",
-      "Maria Prieto Alvaro",
-      "Dar�o Cruz S",
-      "David A. Donoso",
-      "Yadira Gonz�lez",
-      "Nixon Cumbicus Torres",
-      "Juan Pablo Su�rez",
-      "Isabel Mart�nez",
-      "Omar Cabrera",
-      "Eduardo Valarezo",
-      "Paulo Herrera",
-      "Pablo Ram�n",
-      "Carlos I�iguez-Armijos",
-      "Fabi�n Reyes-Bueno",
-      "Augusta Cueva-Agila",
-      "Adri�n Escudero (ORCID 0000-0002-...",
-      "Yenny Gonz�lez Ramos (ORCID: 000..."
-    ]
+    "year": "2011"
   },
   {
     "name": "Baltazar Calvas",
@@ -520,8 +375,7 @@ var data = [
         "11"
       ]
     },
-    "year": "2008",
-    "collaborators": []
+    "year": "2008"
   },
   {
     "name": "Diana Guaya",
@@ -545,8 +399,7 @@ var data = [
         "13"
       ]
     },
-    "year": "2015",
-    "collaborators": []
+    "year": "2015"
   },
   {
     "name": "Wilson Guillermo Siguenza Campoverde",
@@ -571,14 +424,7 @@ var data = [
         "10"
       ]
     },
-    "year": "2015",
-    "collaborators": [
-      "Roman Bu�ay",
-      "Cristhian Sarango",
-      "luis Serpa",
-      "Maria Lorena Reyes Toro",
-      "Enith Quezada-Loaiza"
-    ]
+    "year": "2015"
   },
   {
     "name": "Liliana Enciso Quispe",
@@ -606,13 +452,7 @@ var data = [
         "12"
       ]
     },
-    "year": "2014",
-    "collaborators": [
-      "Juan Garbajosa",
-      "Luis Barba-Guaman (ORCID:0000-00...",
-      "Luis Mengual Gal�n",
-      "Pedro Pablo Alarcon"
-    ]
+    "year": "2014"
   },
   {
     "name": "MI Punín",
@@ -638,26 +478,7 @@ var data = [
         "9"
       ]
     },
-    "year": "2012",
-    "collaborators": [
-      "Diana Rivera-Rogel",
-      "Ketty Daniela Calva-Cabrera",
-      "Isidro Mar�n-Guti�rrez",
-      "Jos� R�as Ara�jo",
-      "M�nica Hinojosa Becerra",
-      "Abel Suing",
-      "Kruzkaya Ord�nez",
-      "Patricio Barrazueta Molina",
-      "Benazir Guti�rrez",
-      "Sylvie Ratt�",
-      "Sabela Direito-Rebollal",
-      "Gabriela S�nchez Carri�n",
-      "Carlos Garc�a Torres",
-      "Cati Mier",
-      "Xos� L�pez-Garc�a",
-      "Jos� Miguel T��ez L�pez",
-      "Pablo Escand�n Montenegro"
-    ]
+    "year": "2012"
   },
   {
     "name": "Paul Székely",
@@ -684,10 +505,7 @@ var data = [
         "17"
       ]
     },
-    "year": "2008",
-    "collaborators": [
-      "Cogalniceanu Dan"
-    ]
+    "year": "2008"
   },
   {
     "name": "Verónica Altamirano Benítez",
@@ -713,27 +531,7 @@ var data = [
         "12"
       ]
     },
-    "year": "2015",
-    "collaborators": [
-      "Jos� Miguel T��ez L�pez",
-      "Isidro Mar�n-Guti�rrez",
-      "Rosario Puertas-Hidalgo",
-      "Almudena Barrientos-B�ez",
-      "Alba-Mar�a Mart�nez-Sala",
-      "Jenny Yaguache",
-      "Kruzkaya Ord�nez",
-      "DAVID CALDEVILLA DOM�NGUEZ",
-      "Eva S�nchez Amboage",
-      "Santiago P�rez Samaniego",
-      "Cecibel Chamba-Maza",
-      "Valent�n Alejandro Mart�nez Fern�ndez",
-      "Diana Gabriela Moreira Aguirre",
-      "Diana Rivera-Rogel",
-      "Karina Valarezo",
-      "Francisco Segado-Boj (ORCID:0000-0...",
-      "Jes�s Segarra-Saavedra (ORCID: 000...",
-      "Francisco Javier Herrero Guti�rrez"
-    ]
+    "year": "2015"
   },
   {
     "name": "Ana D. Verdú Delgado",
@@ -759,18 +557,7 @@ var data = [
         "11"
       ]
     },
-    "year": "2011",
-    "collaborators": [
-      "Anastasia T�llez Infantes",
-      "Luis S�nchez V�zquez",
-      "Carmen Ma�as Viejo",
-      "Paz Guarderas Albuja (orcid.org/0000-...",
-      "Israel Celi Toledo",
-      "Erica Briones Vozmediano",
-      "Norman GONZ�LEZ-TAMAYO",
-      "Daysi Garc�a-Tinisaray",
-      "Luz Maria Castro"
-    ]
+    "year": "2011"
   },
   {
     "name": "Torres-Carrion Pablo Vicente",
@@ -798,29 +585,7 @@ var data = [
         "11"
       ]
     },
-    "year": "2015",
-    "collaborators": [
-      "Carina Gonzalez",
-      "Rodriguez M. Germania",
-      "Alfonso Infante",
-      "Juan Carlos Torres-Diaz",
-      "Luis Barba-Guaman (ORCID:0000-00...",
-      "Silvia Libertad Vaca Gallegos",
-      "Vanesa Mu�oz",
-      "CESAR BERNAL",
-      "Miguel Botto-Tobar",
-      "VIVIAN F�LIX L�PEZ BATISTA",
-      "Ruth Reategui",
-      "Victor Lopez Guerra",
-      "Rosa Gil Iranzo",
-      "Byron Fernando Bustamante Granda",
-      "Juan Manuel Garc�a-Samaniego",
-      "Jos� Barbosa Corbacho",
-      "Cesar Collazos - https://orcid.org/0000...",
-      "Jaime Mu�oz-Arteaga",
-      "Juan Manuel Gonzalez Calleros",
-      "Jennifer Perez Benedi"
-    ]
+    "year": "2015"
   },
   {
     "name": "Lorena Condolo",
@@ -848,8 +613,7 @@ var data = [
         "14"
       ]
     },
-    "year": "2017",
-    "collaborators": []
+    "year": "2017"
   },
   {
     "name": "Rodriguez M. Germania",
@@ -875,16 +639,7 @@ var data = [
         "5"
       ]
     },
-    "year": "2007",
-    "collaborators": [
-      "Samanta Patricia Cueva Carri�n",
-      "Torres-Carrion Pablo Vicente",
-      "Jennifer Perez Benedi",
-      "Rommel Torres",
-      "Carina Gonzalez",
-      "Edmundo Tovar Caro",
-      "Audrey Romero-Pel�ez"
-    ]
+    "year": "2007"
   },
   {
     "name": "Natalia Bailon-Moscoso",
@@ -912,10 +667,6 @@ var data = [
         "12"
       ]
     },
-    "year": "2012",
-    "collaborators": [
-      "Juan Carlos Romero-Benavides",
-      "Patricia Ostrosky-Wegman"
-    ]
+    "year": "2012"
   }
 ];

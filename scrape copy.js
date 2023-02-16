@@ -6,15 +6,11 @@ var async = require('async');
 const path = require('path');
 //agregado
 const ExcelJS = require('exceljs');
-const scholar = require('google-scholar');
 
 const inputFile = process.argv[2];
 const inputName = path.basename(inputFile, path.extname(inputFile)).replace('people-', '');
 const outputFile = `stats-${inputName}.js`;
 console.log(`outputFile: ${outputFile}`);
-
-// const scrapeEntry = require('./modulos-scrapy/scrapeEntry');
-// const excelWriter = require('./modulos-scrapy/excelWriter');
 
 const fs = require('fs');
 // Establecer la codificación al leer el archivo
@@ -24,10 +20,6 @@ const people = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
 // var people = require(process.argv[2]);
 
 // La función "scrapeEntry" extrae información del perfil de un investigador dado en Google Scholar.
-
-
-
-
 var scrapeEntry = function (person, doneCallback) {
   var url = people[person];
   var data = {};
@@ -38,6 +30,7 @@ var scrapeEntry = function (person, doneCallback) {
 
     // Se utiliza la biblioteca "cheerio" para analizar el HTML y extraer la información necesaria del perfil.
     var $ = cheerio.load(body);
+
     try {
       // Se imprime un mensaje en la consola para indicar que se está realizando el raspado.
       console.error("Scraping " + person + "...");
@@ -101,7 +94,6 @@ var scrapeEntry = function (person, doneCallback) {
   });
 };
 
-
 const iconv = require('iconv-lite');
 // http://javascriptplayground.com/blog/2013/06/think-async/
 
@@ -113,8 +105,8 @@ async.mapSeries(Object.keys(people), scrapeEntry, function (err, results) {
 });
 */
 
-// Agregar esta informacion a excel Crear un nuevo libro de Excel
-/*
+// Agregar esta informacion a excel // Crear un nuevo libro de Excel
+
 async.mapSeries(Object.keys(people), scrapeEntry, function (err, results) {
   const workbook = new ExcelJS.Workbook();
   const worksheet = workbook.addWorksheet('Sheet 1');
@@ -179,67 +171,3 @@ async.mapSeries(Object.keys(people), scrapeEntry, function (err, results) {
       console.log('File saved! as ' + outputFileExcel + '.xlsx');
     });
 });
-
-
-
-*/
-//excelWriter(people, doneCallback)
-
-async.mapSeries(Object.keys(people), scrapeEntry, function (err, results) {
-  const workbook = new ExcelJS.Workbook();
-  const worksheet = workbook.addWorksheet('Sheet 1');
-
-  // Define an array of column headers
-  const columnHeaders = [
-    { header: 'Name', key: 'name' },
-    { header: 'URL', key: 'url' },
-    { header: 'Photo', key: 'photo' },
-    { header: 'Affiliation', key: 'affiliation' },
-    { header: 'Keywords', key: 'keywords' },
-    { header: 'Citations - All time', key: 'citationsAllTime' },
-    { header: 'Citations - Since 2018', key: 'citationsSince2018' },
-    { header: 'H-Index - All time', key: 'hindexAllTime' },
-    { header: 'H-Index - Since 2018', key: 'hindexSince2018' },
-    { header: 'I10-Index - All time', key: 'i10indexAllTime' },
-    { header: 'I10-Index - Since 2018', key: 'i10indexSince2018' },
-    { header: 'Year', key: 'year' },
-  ];
-
-  // Add the collaborator headers to the column headers array
-  for (let i = 1; i <= 10; i++) {
-    columnHeaders.push({ header: `Collaborator ${i}`, key: `collaborator${i}` });
-  }
-
-  // Agregar encabezados de columna
-  worksheet.columns = columnHeaders;
-
-  // Agregar datos
-  results.forEach(function (result) {
-    const collaboratorData = {};
-    for (let i = 1; i <= 10; i++) {
-      collaboratorData[`collaborator${i}`] = result.collaborators[i - 1] || '';
-    }
-    worksheet.addRow({
-      name: result.name,
-      url: result.url,
-      photo: result.photo,
-      affiliation: result.affiliation,
-      keywords: result.keywords.join(', '),
-      citationsAllTime: result.stats.citations[0],
-      citationsSince2018: result.stats.citations[1],
-      hindexAllTime: result.stats.hindex[0],
-      hindexSince2018: result.stats.hindex[1],
-      i10indexAllTime: result.stats.i10index[0],
-      i10indexSince2018: result.stats.i10index[1],
-      year: result.year,
-      ...collaboratorData,
-    });
-  });
-  const outputFileExcel = `stats-${inputName}`;
-  // Guardar el archivo Excel
-  workbook.xlsx.writeFile(`${outputFileExcel}.xlsx`)
-    .then(function () {
-      console.log('File saved! as ' + outputFileExcel + '.xlsx');
-    });
-});
-
