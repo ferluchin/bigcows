@@ -1,6 +1,5 @@
 var request = require('request');
 var cheerio = require('cheerio');
-
 const fs = require('fs');
 // Establecer la codificación al leer el archivo
 const people = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
@@ -51,6 +50,25 @@ var scraperNode = function (person, doneCallback) {
             // Se extrae el año de la última publicación del investigador.
             var rawYear = $('.gsc_md_hist_b');
 
+            // Se extraen los artículos más citados del investigador.
+            var articleEls = $('.gsc_a_tr');
+            var topArticles = [];
+            articleEls.each(function (index, element) {
+                if (index < 20) {
+                    var title = $(element).find('.gsc_a_t a').text();
+                    var authors = $(element).find('.gs_gray').text();
+                    var year = $(element).find('.gsc_a_y').text();
+                    var citations = $(element).find('.gsc_a_c').text();
+                    var article = {
+                        'title': title,
+                        'authors': authors,
+                        'year': year,
+                        'citations': citations
+                    };
+                    topArticles.push(article);
+                }
+            });
+
             /*
             // Se extrae la tabla de citas por año del investigador.
             var rawCitationsByYear = $('#gsc_rsb_st_tbl tbody');
@@ -87,7 +105,8 @@ var scraperNode = function (person, doneCallback) {
             data = {
                 'name': person,
                 'url': url,
-                'photo': 'http://scholar.google.com' + photo,
+                // 'photo': 'http://scholar.google.com' + photo,
+                'photo': photo,
                 'affiliation': affiliation,
                 'keywords': keywords,
                 'stats': stats,
@@ -95,6 +114,10 @@ var scraperNode = function (person, doneCallback) {
                 'collaborators': collaborators,
                 //'citationsByYear': {}
             };
+
+            // Se añaden los artículos más citados al objeto de datos.
+            data['topArticles'] = topArticles;
+            console.log("🚀 ~ file: scraperNode.js:119 ~ topArticles", topArticles)
             // Se añaden las citas por año al objeto de datos.
 
             /*

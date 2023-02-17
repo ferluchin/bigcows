@@ -33,11 +33,22 @@ function excelWriter(inputName) {
             { header: 'Citations - 2019', key: 'citations2019' },
             { header: 'Citations - 2018', key: 'citations2018' },
             */
+
         ];
 
         // Add the collaborator headers to the column headers array
         for (let i = 1; i <= 10; i++) {
             columnHeaders.push({ header: `Collaborator ${i}`, key: `collaborator${i}` });
+        }
+
+        // Add the 20 articles  to the column headers array
+        for (let i = 1; i <= 20; i++) {
+            columnHeaders.push(
+                { header: `titleArticle ${i}`, key: `titleArticle${i}` },
+                { header: `authorsArticle ${i}`, key: `authorsArticle${i}` },
+                { header: `yearArticle ${i}`, key: `yearArticle${i}` },
+                { header: `citationsArticle ${i}`, key: `citationsArticle${i}` });
+
         }
 
         // Agregar encabezados de columna
@@ -49,6 +60,26 @@ function excelWriter(inputName) {
             for (let i = 1; i <= 10; i++) {
                 collaboratorData[`collaborator${i}`] = result.collaborators[i - 1] || '';
             }
+            /*
+            result.topArticles.forEach(function (article, index) {
+                console.log(`Top Article ${index + 1}:`);
+                console.log(`Title: ${article.title}`);
+                console.log(`Authors: ${article.authors}`);
+                console.log(`Year: ${article.year}`);
+                console.log(`Citations: ${article.citations}`);
+            });
+            */
+            console.log("🚀 ~ file: excelWriter.js:60 ~ collaboratorData", collaboratorData)
+            const topArticlesData = {};
+
+            for (let i = 1; i <= 20; i++) {
+                const article = result.topArticles[i - 1] || {};
+                topArticlesData[`titleArticle${i}`] = article.title || '';
+                topArticlesData[`authorsArticle${i}`] = article.authors || '';
+                topArticlesData[`yearArticle${i}`] = article.year || '';
+                topArticlesData[`citationsArticle${i}`] = article.citations || '';
+            }
+            console.log("🚀 ~ file: excelWriter.js:73 ~ topArticlesData", topArticlesData)
             worksheet.addRow({
                 name: result.name,
                 url: result.url,
@@ -62,15 +93,10 @@ function excelWriter(inputName) {
                 i10indexAllTime: result.stats.i10index[0],
                 i10indexSince2018: result.stats.i10index[1],
                 year: result.year,
-                /*
-                citations2023: result.citationsByYear['2023'] || 0,
-                citations2022: result.citationsByYear['2022'] || 0,
-                citations2021: result.citationsByYear['2021'] || 0,
-                citations2020: result.citationsByYear['2020'] || 0,
-                citations2019: result.citationsByYear['2019'] || 0,
-                citations2018: result.citationsByYear['2018'] || 0,
-                */
+
                 ...collaboratorData,
+                ...topArticlesData,
+
             });
         });
         const outputFileExcel = `stats-${inputName}`;
