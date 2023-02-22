@@ -60,16 +60,8 @@ function excelWriter(inputName) {
             for (let i = 1; i <= 10; i++) {
                 collaboratorData[`collaborator${i}`] = result.collaborators[i - 1] || '';
             }
-            /*
-            result.topArticles.forEach(function (article, index) {
-                console.log(`Top Article ${index + 1}:`);
-                console.log(`Title: ${article.title}`);
-                console.log(`Authors: ${article.authors}`);
-                console.log(`Year: ${article.year}`);
-                console.log(`Citations: ${article.citations}`);
-            });
-            */
-            console.log("🚀 ~ file: excelWriter.js:60 ~ collaboratorData", collaboratorData)
+
+            //console.log("🚀 ~ file: excelWriter.js:60 ~ collaboratorData", collaboratorData)
             const topArticlesData = {};
 
             for (let i = 1; i <= 20; i++) {
@@ -79,7 +71,7 @@ function excelWriter(inputName) {
                 topArticlesData[`yearArticle${i}`] = article.year || '';
                 topArticlesData[`citationsArticle${i}`] = article.citations || '';
             }
-            console.log("🚀 ~ file: excelWriter.js:73 ~ topArticlesData", topArticlesData)
+            //console.log("🚀 ~ file: excelWriter.js:73 ~ topArticlesData", topArticlesData)
             worksheet.addRow({
                 name: result.name,
                 url: result.url,
