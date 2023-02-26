@@ -139,7 +139,7 @@ var scraperNode = function (person, doneCallback) {
       // Se utiliza un temporizador para controlar la velocidad de scrap.
       setTimeout(function () {
         doneCallback(null, data);
-      }, 1000);
+      }, 3000);
     }
   );
 };

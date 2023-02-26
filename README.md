@@ -10,6 +10,8 @@ Rerunning the Scraper
 
 Assuming you have [node.js](http://nodejs.org/) installed, rerun the scraper as follows:
 
+$ node scrape.js ./people-hci.json
+
 ```
 $ npm install request cheerio async
 $ node scrape.js ./people-ir.json > stats-ir.js
