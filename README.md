@@ -1,14 +1,23 @@
-Scholar Scraper
+Google Scholar
 ===============
 
-I wrote this simple utility to scrape citation statistics of researcher profiles on [Google Scholar](http://scholar.google.com/), using it as an opportunity to learn [node.js](http://nodejs.org/). I began with a list of information retrieval researchers, but have since expanded to include a separate list of researchers in human-computer interaction. The results are [here](http://lintool.github.io/scholar-scraper/).
+Escribí este scraper utilidad para obtener las estadísticas de citas de los perfiles de los investigadores en [Google Scholar](http://scholar.google.com/), implementando node.js [node.js](http://nodejs.org/). Empecé con una lista de investigadores en recuperación de información, pero desde entonces la he ampliado para incluir una lista separada de investigadores en interacción persona-ordenador. 
 
-**Editorial note**: This list contains only researchers who have a Google Scholar profile; names were identified by snowball sampling and various other *ad hoc* techniques. If you wish to see a name added, please email me or send a pull request. I will endeavor to periodically run the crawl to gather updated statistics. Of course, scholarly achievement is only partially measured by citation counts, which are known to be flawed in many ways. Evaluations of scholars should include comprehensive examination of their research contributions.
+Los datos resultantes en formato excel son importados a la herramienta de visualización de datos Power BI para su análisis y visualización.
 
-Rerunning the Scraper
+**Nota editorial**: 
+Esta lista sólo contiene investigadores que tienen un perfil en Google Scholar; 
+
+USO DE LA HERRAMIENTA GOOGLE SCHOLAR SCRAPER
 ---------------------
 
-Assuming you have [node.js](http://nodejs.org/) installed, rerun the scraper as follows:
+Se requiere [node.js](http://nodejs.org/) instalado, 
+
+Se instalan todos los paquetes requeridos para el scraper:
+
+$ npm install 
+
+Se ejecuta el scraper de la siguiente manera:
 
 $ node scrape.js ./people-hci.json
 
@@ -22,7 +31,7 @@ $ node scrape.js ./people-usfq.json > stats-usfq.js
 $ node scrape.js ./people-stratosphere.json > stats-stratosphere.js
 ```
 
-To scrape the images:
+Para realizar scrapping de las imagenes de los investigadores, se ejecuta el siguiente comando:
 
 ```
 $ node download-images.js ./stats-ir.js
@@ -33,6 +42,6 @@ $ node download-images.js ./stats-usfq.js
 $ node download-images.js ./stats-stratosphere.js
 ```
 
-Then open up `index.html` and it should display the new statistics.
+A continuación, abra `index.html` y debería mostrar las nuevas estadísticas.
 
 
